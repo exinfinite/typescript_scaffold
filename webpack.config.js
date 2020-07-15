@@ -29,8 +29,10 @@ module.exports = {
 	output: {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "./dist"),
+		publicPath: 'dist/',
 		libraryTarget: 'umd',
-		globalObject: 'this'
+		globalObject: 'this',
+		chunkFilename: '[name].chunk.js'
 	},
 	optimization: {
 		minimize: _is_prod,
