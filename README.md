@@ -1,5 +1,14 @@
-# Typescript-scaffold-with-treeshaking
-Typescript + Webpack + Babel
-
-1. npm install
-2. npm run start
+# 安裝
+clone this repo
+```js
+cd typescript_scaffold
+npm install
+```
+# develop with live server
+```js
+npm run start
+```
+# production
+```js
+npm run build
+```
