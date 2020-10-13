@@ -1,5 +1,6 @@
 const path = require("path"),
-	TerserPlugin = require("terser-webpack-plugin");
+	TerserPlugin = require("terser-webpack-plugin"),
+	fs = require('fs');
 const babelLoader = {
 	loader: "babel-loader",
 	options: {
@@ -33,6 +34,16 @@ module.exports = {
 		libraryTarget: 'umd',
 		globalObject: 'this',
 		chunkFilename: '[name].chunk.js'
+	},
+	devServer: {
+		https: {
+			key: fs.readFileSync('./server.key'),
+			cert: fs.readFileSync('./server.crt')
+		},
+		index: './index.html',
+		port: 3000,
+		open: true,
+		compress: true
 	},
 	optimization: {
 		minimize: _is_prod,
