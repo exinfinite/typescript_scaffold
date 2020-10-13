@@ -38,7 +38,5 @@
     "yarn": ">= 1.6.0"
   },
   "main": ".dist/bundle.js",
-  "dependencies": {
-    "http-server": "^0.12.3"
-  }
+  "dependencies": {}
 }
