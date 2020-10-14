@@ -37,10 +37,11 @@ module.exports = {
 	},
 	devServer: {
 		https: {
-			key: fs.readFileSync('./server.key'),
-			cert: fs.readFileSync('./server.crt')
+			key: fs.readFileSync('./public/server.key'),
+			cert: fs.readFileSync('./public/server.crt')
 		},
-		index: './index.html',
+		contentBase: path.join(__dirname, 'public'),
+		index: 'index.html',
 		port: 3000,
 		open: true,
 		compress: true
